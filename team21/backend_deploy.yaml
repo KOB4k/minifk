@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: server
-  name: server
+  name: backend
   namespace: default
 spec:
   replicas: 1
@@ -21,7 +21,7 @@ spec:
         app: server
     spec:
       containers:
-      - image: emma2541/team21-backend
+      - image: theppakorn/backend:v0.1
         imagePullPolicy: Always
         name: team21-backend
       dnsPolicy: ClusterFirst

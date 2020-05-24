@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: client
-  name: client
+  name: frontend
   namespace: default
 spec:
   replicas: 2
@@ -21,7 +21,7 @@ spec:
         app: client
     spec:
       containers:
-      - image: emma2541/team21-client
+      - image: theppakorn/frontend:v0.1
         imagePullPolicy: Always
         name: team21-client
       dnsPolicy: ClusterFirst

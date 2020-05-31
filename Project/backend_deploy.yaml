@@ -6,7 +6,7 @@ metadata:
   name: backend
   namespace: default
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: backend
@@ -21,8 +21,8 @@ spec:
         app: backend
     spec:
       containers:
-      - image: theppakorn/backend:v0.1
-        imagePullPolicy: Always
+      - image: pskrnreo/team21-backend:v0.2
+        imagePullPolicy: IfNotPresent
         name: team21-backend
       dnsPolicy: ClusterFirst
       restartPolicy: Always
